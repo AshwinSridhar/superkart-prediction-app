@@ -32,15 +32,15 @@ def superkart_sales():
 
     # Extract relevant features from the JSON data
     sample = {
-        'product_weight': property_data['product_weight'],
-        'product_sugar_content': property_data['product_sugar_content'],
-        'product_allocated_area': property_data['product_allocated_area'],
-        'product_mrp': property_data['product_mrp'],
-        'store_size': property_data['store_size'],
-        'store_location_city_type': property_data['store_location_city_type'],
-        'store_type': property_data['store_type'],
-        'product_id_char': property_data['product_id_char'],
-        'product_type_category': property_data['product_type_category']
+        'Product_Weight': property_data['Product_Weight'],
+        'Product_Sugar_Content': property_data['Product_Sugar_Content'],
+        'Product_Allocated_Area': property_data['Product_Allocated_Area'],
+        'Product_MRP': property_data['Product_MRP'],
+        'Store_Size': property_data['Store_Size'],
+        'Store_Location_City_Type': property_data['Store_Location_City_Type'],
+        'Store_Type': property_data['Store_Type'],
+        'Product_Id_Char': property_data['Product_Id_Char'],
+        'Product_Type_Category': property_data['Product_Type_Category']
     }
 
     # Convert the extracted data into a Pandas DataFrame
