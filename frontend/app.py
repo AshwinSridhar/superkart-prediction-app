@@ -25,23 +25,23 @@ product_type_category = st.selectbox("Product Type Category", ["Perishables", "N
 
 # Convert user input into a DataFrame
 input_data = pd.DataFrame([{
-    'product_weight': product_weight,
-    'product_sugar_content': product_sugar_content,
-    'product_allocated_area': product_allocated_area,
-    'product_mrp': product_mrp,
-    'store_size': store_size,
-    'store_location_city_type': store_location_city_type,  # Convert to 't' or 'f'
-    'store_type': store_type,
-    'product_id_char': product_id_char,
-    'product_type_category': product_type_category
+    'Product_Weight': product_weight,
+    'Product_Sugar_Content': product_sugar_content,
+    'Product_Allocated_Area': product_allocated_area,
+    'Product_MRP': product_mrp,
+    'Store_Size': store_size,
+    'Store_Location_City_Type': store_location_city_type,  # Convert to 't' or 'f'
+    'Store_Type': store_type,
+    'Product_Id_Char': product_id_char,
+    'Product_Type_Category': product_type_category
 }])
 
 # Make prediction when the "Predict" button is clicked
 if st.button("Predict", type="primary"):
     response = requests.post(f"{BACKEND_URL}/v1/sales", json=input_data.to_dict(orient='records')[0])  # Send data to Flask API
     if response.status_code == 200:
-        prediction = response.json()['Predicted Price (in dollars)']
-        st.success(f"Predicted Rental Price (in dollars): {prediction}")
+        prediction = response.json()['Predicted Sales (in dollars)']
+        st.success(f"Predicted Sales (in dollars): {prediction}")
     else:
         st.error("Unable to connect to the prediction API.")
 
