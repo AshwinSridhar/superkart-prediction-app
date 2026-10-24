@@ -1,0 +1,11 @@
+pandas>=2.2.0
+numpy>=2.0.0
+scikit-learn>=1.5.0
+xgboost>=2.0.0
+joblib>=1.4.0
+Werkzeug==2.2.2
+flask==2.2.2
+gunicorn==20.1.0
+requests>=2.32.0
+uvicorn[standard]
+streamlit>=1.43.2
