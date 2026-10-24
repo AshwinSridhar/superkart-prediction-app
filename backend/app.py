@@ -39,8 +39,9 @@ def superkart_sales():
         'Store_Size': property_data['Store_Size'],
         'Store_Location_City_Type': property_data['Store_Location_City_Type'],
         'Store_Type': property_data['Store_Type'],
-        'Product_Id_Char': property_data['Product_Id_Char'],
-        'Product_Type_Category': property_data['Product_Type_Category']
+        'Product_Id_char': property_data['Product_Id_char'],
+        'Product_Type_Category': property_data['Product_Type_Category'],
+        'Store_Establishment_Year': property_data['Store_Establishment_Year']
     }
 
     # Convert the extracted data into a Pandas DataFrame
@@ -65,7 +66,7 @@ def superkart_sales():
 @superkart_sales_predictor_api.post('/v1/salesbatch')
 def superkart_sales_batch():
     """
-    This function handles POST requests to the '/v1/rentalbatch' endpoint.
+    This function handles POST requests to the '/v1/@superkart_sales_predictor_api.post('/v1/salesbatch') endpoint.
     It expects a CSV file containing property details for multiple properties
     and returns the predicted rental prices as a dictionary in the JSON response.
     """
