@@ -21,6 +21,8 @@ store_location_city_type = st.selectbox("Store Location City Type", ["Tier 1", "
 store_type = st.selectbox("Store Type", ["Supermarket Type1", "Supermarket Type2", "Supermarket Type3"])
 product_id_char = st.selectbox("Product ID Character", ["FD", "NC", "C", "D", "E"])
 product_type_category = st.selectbox("Product Type Category", ["Perishables", "Non Perishables"])
+store_establishment_year = st.number_input("Store Establishment Year", min_value=1900, max_value=2026, value=2022)
+
 
 
 # Convert user input into a DataFrame
@@ -32,8 +34,9 @@ input_data = pd.DataFrame([{
     'Store_Size': store_size,
     'Store_Location_City_Type': store_location_city_type,  # Convert to 't' or 'f'
     'Store_Type': store_type,
-    'Product_Id_Char': product_id_char,
-    'Product_Type_Category': product_type_category
+    'Product_Id_char': product_id_char,
+    'Product_Type_Category': product_type_category,
+    'Store_Establishment_Year': store_establishment_year
 }])
 
 # Make prediction when the "Predict" button is clicked
